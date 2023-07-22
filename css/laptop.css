@@ -153,6 +153,7 @@ i {
 
 .job-info-group {
   display: grid;
+  grid-template-rows: subgrid;
   gap: 50px;
 }
 
@@ -278,9 +279,12 @@ i {
   border: none;
 }
 
+.certificate-info img {
+  padding-left: 15px;
+}
+
 .certificate-info:nth-of-type(2) img {
   border-left: #d6c08d 1px solid;
-  padding-left: 15px;
 }
 
 .certificate-info img {
@@ -380,9 +384,13 @@ td {
   text-align: center;
 }
 
+#footer ul {
+  padding-left: 0;
+}
+
 #footer li {
   display: inline-block;
-  margin-left: 30px;
+  margin: 0 30px;
 }
 
 #footer i {
