@@ -1,0 +1,21 @@
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .center img {
+    display: none;
+  }
+  .center {
+    padding: 0 2rem;
+  }
+  #about .container {
+    gap: 150px;
+  }
+
+  #job-info .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 6.5fr 6fr 4fr;
+    gap: 2rem;
+  }
+
+  .job-info-title {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
