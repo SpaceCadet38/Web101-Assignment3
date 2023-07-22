@@ -18,4 +18,8 @@
   .job-info-title {
     grid-template-columns: 1.5fr 1fr;
   }
+  .certificate-info img {
+    width: 180px;
+    aspect-ratio: auto;
+  }
 }

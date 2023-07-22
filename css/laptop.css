@@ -143,16 +143,25 @@ i {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
-  grid-template-rows: 9fr 5fr;
+  grid-template-rows: repeat(2, 1fr);
   color: gray;
 }
 
-#job-info .job-info-item {
+.job-info-item:nth-child(1) {
+  grid-row: 1/3;
+}
+
+.job-info-group {
+  display: grid;
+  gap: 50px;
+}
+
+.job-info-item {
   border: 1px #e9ecef solid;
   box-shadow: 1px 1px 5px #e9ecef;
 }
 
-#job-info .job-info-main {
+.job-info-main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
