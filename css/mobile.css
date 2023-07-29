@@ -44,4 +44,14 @@
   #footer li {
     margin: 0 0.5rem;
   }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-scope .project-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
 }

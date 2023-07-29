@@ -406,3 +406,109 @@ td {
 #footer a:visited {
   color: #228be6;
 }
+
+/*
+  Styling digital CV information
+*/
+.button-home {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background-color: #199cdb;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button-home i {
+  color: #fff;
+}
+
+.page-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.project-timeline {
+  grid-row: span 2;
+}
+
+.project-content i {
+  color: #000;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  max-width: 95%;
+  margin: 0 auto;
+  border-top: #dee2e6 1px solid;
+}
+
+.project-content:last-child {
+  border-bottom: #dee2e6 1px solid;
+  margin-bottom: 3rem;
+}
+
+.timeline-item {
+  display: flex;
+}
+
+.timeline-icon {
+  font-size: 1.75rem;
+  padding: 1rem;
+  background-color: #9e88ff;
+  border: #000 1px solid;
+  border-radius: 50%;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.project-grid {
+  border: blue 8px solid;
+}
+
+.project-item {
+  border: blue 8px solid;
+}
+
+.project-icon {
+  padding: 0 2.25rem;
+  font-size: 1.5rem;
+}
+
+.project-item h1 {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  color: blue;
+}
+
+.project-scope .project-content {
+  display: grid;
+  margin: 0 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.project-scope h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-timeline h3 {
+  margin: 0 1.5rem;
+}
+
+.project-timeline .project-content {
+  border: none;
+  margin: 1.5rem auto;
+}
+.project-timeline .project-description {
+  width: 100%;
+  border-bottom: 1px #dee2e6 dashed;
+}
