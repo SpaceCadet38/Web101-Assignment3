@@ -6,46 +6,41 @@
   .center {
     padding: 0 2rem;
   }
-
-  #about .container {
-    gap: 150px;
+  /* About part */
+  #about .section-title {
+    margin: 0;
   }
 
+  #about .container > div {
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+  }
+  /* Job info part */
   #job-info .container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto;
     gap: 2rem;
   }
 
-  .job-info-item:nth-child(1) {
-    grid-row: 1/3;
-  }
-
-  .job-info-item:nth-child(5) {
-    grid-row: 3/4;
-  }
-
-  .job-info-group {
-    display: grid;
-    grid-template-rows: subgrid;
-    gap: 1rem;
+  .job-info-item {
+    padding-bottom: 2rem;
   }
 
   .job-info-title {
     grid-template-columns: 1.5fr 1fr;
   }
+
   /* Certificate info part*/
   .certificate-info ul {
     margin-bottom: 0;
   }
-
-  .project-grid {
-    grid-template-columns: 1fr;
+  /* Project part */
+  #project .container {
+    padding: 0;
   }
 
-  .project-scope .project-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 4rem;
+  .project-main {
+    gap: 0;
+    transform: scale(0.9, 0.9);
   }
 }

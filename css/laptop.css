@@ -33,7 +33,11 @@ h3 {
 i {
   color: #228be6;
 }
-
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+}
 /*Styling banner*/
 #banner {
   position: relative;
@@ -121,11 +125,6 @@ i {
   gap: 100px;
 }
 
-#about .section-title {
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-
 #personal-info .info {
   list-style-type: none;
   padding: 0;
@@ -143,18 +142,8 @@ i {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 5fr 4fr;
   color: gray;
-}
-
-.job-info-item:nth-child(1) {
-  grid-row: 1/3;
-}
-
-.job-info-group {
-  display: grid;
-  grid-template-rows: subgrid;
-  gap: 50px;
 }
 
 .job-info-item {
@@ -260,36 +249,31 @@ i {
 
 /* Styling certificates & reward part */
 
-#certificate .container {
+.certificate-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-#certificate .section-title {
-  grid-column: 1/3;
 }
 
 .certificate-info {
   display: flex;
   padding: 40px 0px;
   border-bottom: #d6c08d 1.5px solid;
+  height: 11rem;
 }
 
 .certificate-info:nth-of-type(3) {
   border: none;
 }
 
-.certificate-info img {
+.certificate-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.certificate-info:nth-of-type(2) .certificate-img {
+  border-left: #d6c08d 1.5px solid;
   padding-left: 15px;
-}
-
-.certificate-info:nth-of-type(2) img {
-  border-left: #d6c08d 1px solid;
-}
-
-.certificate-info img {
-  width: 180px;
-  display: inline-block;
 }
 
 .certificate-info ul {
@@ -297,25 +281,20 @@ i {
   list-style-type: '- ';
   margin-right: 0;
   font-size: 13px;
+  font-weight: bold;
   color: gray;
 }
 
 .certificate-info li:first-child {
   list-style: none;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 15px;
   color: #000;
   margin-bottom: 10px;
 }
 
 /* Styling project part*/
-#project .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-size: 12px;
-}
-
 #project {
   color: gray;
 }
@@ -324,31 +303,47 @@ i {
   color: gray;
 }
 #project .section-title {
-  grid-column: 1/4;
   color: #000;
   font-size: 2em;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+.project-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  font-size: 15px;
+  gap: 3.75rem;
+}
+
+.project-img {
+  border: 1px #dee2e6 solid;
+  border-bottom: none;
 }
 
 .project img {
-  width: 330px;
-  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-title {
-  width: 330px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
   padding: 20px 20px;
+  font-weight: bold;
   border: #dee2e6 1px solid;
   border-bottom: none;
 }
 
-.project-title:nth-of-type(1) {
-  color: #000;
-  font-size: 16px;
+.project-title a {
+  text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
+}
+
+.project-title:nth-of-type(odd) {
+  gap: 1rem;
 }
 
 #project .time-milestone {
@@ -357,7 +352,6 @@ i {
 }
 
 .project table {
-  width: 330px;
   border-collapse: collapse;
 }
 
@@ -367,10 +361,11 @@ td {
 }
 
 .project td:nth-of-type(odd) {
-  width: 25%;
+  width: 40%;
   border-right: none;
   vertical-align: top;
-  padding: 10px 5px;
+  padding: 10px 20px;
+  font-weight: bold;
 }
 
 .project td:nth-of-type(even) {
