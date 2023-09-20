@@ -43,4 +43,36 @@
     gap: 0;
     transform: scale(0.9, 0.9);
   }
+
+  /* Styling CV projects at another page*/
+  .activity-grid {
+    grid-template-columns: auto;
+  }
+
+  .activity-content {
+    flex-direction: column;
+  }
+
+  .activity-description {
+    align-self: flex-start;
+    padding-left: 1rem;
+  }
+
+  .activity-icon {
+    padding-top: 1rem;
+  }
+
+  .activity-description {
+    align-items: flex-start;
+  }
+
+  .timeline-icon {
+    align-self: start;
+  }
+
+  .activity-scope .activity-content {
+    gap: 1rem;
+    margin-bottom: 3rem;
+    border-bottom: none;
+  }
 }

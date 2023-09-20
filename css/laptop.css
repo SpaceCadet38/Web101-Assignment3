@@ -403,18 +403,31 @@ td {
 }
 
 /*
-  Styling digital CV information
+  Styling project outer page 
 */
-.button-home {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
+.btn-homepage {
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 5px 0px;
+  background: none;
+  cursor: pointer;
+  border: none;
   background-color: #199cdb;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  color: #dee2e6;
+}
+.btn-homepage i {
+  color: #dee2e6;
 }
 
-.button-home i {
-  color: #fff;
+.btn-homepage:hover {
+  color: #199cdb;
+  border: 2px #199cdb solid;
+  background-color: #dee2e6;
+}
+
+.btn-homepage:hover i {
+  color: #199cdb;
 }
 
 .page-wrapper {
@@ -422,21 +435,22 @@ td {
   margin: 0 auto;
 }
 
-.project-grid {
+.activity-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
+  border: blue 8px solid;
 }
 
-.project-timeline {
+.activity-timeline {
   grid-row: span 2;
 }
 
-.project-content i {
+.activity-content i {
   color: #000;
 }
 
-.project-content {
+.activity-content {
   display: flex;
   align-items: center;
   max-width: 95%;
@@ -444,7 +458,7 @@ td {
   border-top: #dee2e6 1px solid;
 }
 
-.project-content:last-child {
+.activity-content:last-child {
   border-bottom: #dee2e6 1px solid;
   margin-bottom: 3rem;
 }
@@ -463,47 +477,42 @@ td {
   color: #fff;
 }
 
-.project-grid {
+.activity-item {
   border: blue 8px solid;
 }
 
-.project-item {
-  border: blue 8px solid;
-}
-
-.project-icon {
-  padding: 0 2.25rem;
+.activity-icon {
+  padding: 0 1.5rem;
   font-size: 1.5rem;
 }
 
-.project-item h1 {
+.activity-item h1 {
   margin-top: 1rem;
   margin-left: 2rem;
   color: blue;
 }
 
-.project-scope .project-content {
-  display: grid;
+.activity-scope .activity-content {
+  display: flex;
   margin: 0 2rem;
-  grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
   gap: 4rem;
 }
 
-.project-scope h3 {
+.activity-scope h3 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.project-timeline h3 {
+.activity-timeline h3 {
   margin: 0 1.5rem;
 }
 
-.project-timeline .project-content {
+.activity-timeline .activity-content {
   border: none;
   margin: 1.5rem auto;
 }
-.project-timeline .project-description {
+.activity-timeline .activity-description {
   width: 100%;
   border-bottom: 1px #dee2e6 dashed;
 }
