@@ -1,9 +1,9 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .center img {
+  .avatar img {
     display: none;
   }
 
-  .center {
+  .avatar {
     padding: 0 2rem;
   }
   /* About part */
@@ -66,10 +66,16 @@
     align-items: flex-start;
   }
 
+  .timeline .activity-content {
+    justify-content: start;
+    align-items: start;
+  }
   .timeline-icon {
     align-self: start;
   }
-
+  .timeline-index {
+    margin-left: 1rem;
+  }
   .activity-scope .activity-content {
     gap: 1rem;
     margin-bottom: 3rem;

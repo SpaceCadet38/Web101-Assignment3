@@ -1,23 +1,23 @@
 /*Color system source:https://yeun.github.io/open-color/ */
 /*Gray: #dee2e6, #e9ecef; Blue: #228be6; Teal: #63e6be */
 
-/* Elements styling */
-:root {
+@import url('./font.css');
+/* Universal Reset  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Base styling */
+html {
   font-size: 16px;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-  font-family: 'Open Sans', sans-serif;
-}
-
+/* Elements styling */
 section > .container {
   max-width: 1170px;
   margin: auto;
-  display: block;
   padding: 30px 50px;
 }
 
@@ -40,7 +40,7 @@ i {
 }
 /*Styling banner*/
 #banner {
-  position: relative;
+  display: flex;
   background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/banner.jpg);
   background-size: cover;
@@ -49,21 +49,18 @@ i {
   background-position: center;
   height: 60vh;
 }
-
+/* Center banner text */
 .banner-texts {
-  text-align: center;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   color: #fff;
 }
-
-.banner-texts span {
-  font-size: 13px;
+/* Because banner text in centered by width of heading, p must be centered by text-align */
+.banner-texts p {
+  font-size: 14px;
+  text-align: center;
 }
 
-#banner h1 {
+.banner-texts h1 {
   font-size: 3rem;
 }
 /*Styling navigation bar*/
@@ -71,10 +68,9 @@ i {
   text-align: center;
 }
 
-#nav-bar .container {
+.nav-links {
   display: flex;
   justify-content: center;
-  padding: 0;
   width: 100%;
 }
 
@@ -85,21 +81,21 @@ i {
   border-left: 1px solid #dee2e6;
   padding: 20px 20px;
 }
-/* Add right border for 2nd and 5th anchor because
- add right border for every anchor will duplicate
+/* Add right border for 2nd and 5th nav-item because
+ add right border for every nav-item will duplicate
  their border and made them bolder */
 #nav-bar a:nth-child(2),
 #nav-bar a:nth-child(5) {
   border-right: 1px solid #dee2e6;
 }
 
-.center {
+.avatar {
   /* padding: 0px 50px; */
   padding: 0px 200px;
   position: relative;
 }
 
-.center img {
+.avatar img {
   position: absolute;
   border: #fff 10px solid;
   border-radius: 50%;
@@ -108,7 +104,6 @@ i {
 }
 /* Styling personal information */
 /* Make 2-color background by linear gradient */
-
 #about {
   background-image: linear-gradient(
     to right,
@@ -136,7 +131,6 @@ i {
 }
 
 /*Styling job information part */
-
 #job-info .container {
   margin-top: 5rem;
   display: grid;
@@ -148,7 +142,7 @@ i {
 
 .job-info-item {
   border: 1px #e9ecef solid;
-  box-shadow: 1px 1px 5px #e9ecef;
+  box-shadow: 2px 2px 8px #e9ecef;
 }
 
 .job-info-main {
@@ -163,7 +157,7 @@ i {
 .job-info-main div {
   position: relative;
 }
-
+/* Add timeline dot before any item */
 .job-info-main div::before {
   content: '';
   height: 8px;
@@ -173,16 +167,6 @@ i {
   position: absolute;
   left: 24px;
   top: 9px;
-}
-
-/* Styling milestone */
-.time-milestone {
-  display: inline-block;
-  padding: 1px 15px;
-  background-color: #228be6;
-  color: #f7f7f7;
-  border-radius: 10px;
-  font-style: italic;
 }
 
 #job-info ul {
@@ -214,6 +198,16 @@ i {
   padding: 20px 25px 20px 0px;
 }
 
+/* Styling milestone */
+.time-milestone {
+  display: inline-block;
+  padding: 1px 15px;
+  background-color: #228be6;
+  color: #f7f7f7;
+  border-radius: 10px;
+  font-style: italic;
+}
+/* Styling hobby and icon */
 .icons-hobby {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -223,17 +217,17 @@ i {
   gap: 1rem 0;
 }
 
-.icons-hobby i {
-  display: block;
-  font-size: 18px;
-  width: 38px;
-  height: 38px;
+.icons-hobby span {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px #63e6be solid;
   border-radius: 50%;
-  text-align: center;
-  line-height: 36px;
+  width: 50px;
+  height: 50px;
 }
-
+/* Creating experience-bar */
 .experience-group {
   margin-left: 30px;
 }
@@ -294,7 +288,7 @@ i {
   margin-bottom: 10px;
 }
 
-/* Styling project part*/
+/* Styling project part */
 #project {
   color: gray;
 }
@@ -422,7 +416,6 @@ td {
 
 .btn-homepage:hover {
   color: #199cdb;
-  border: 2px #199cdb solid;
   background-color: #dee2e6;
 }
 
@@ -442,7 +435,7 @@ td {
   border: blue 8px solid;
 }
 
-.activity-timeline {
+.timeline {
   grid-row: span 2;
 }
 
@@ -453,7 +446,7 @@ td {
 .activity-content {
   display: flex;
   align-items: center;
-  max-width: 95%;
+  max-width: 90%;
   margin: 0 auto;
   border-top: #dee2e6 1px solid;
 }
@@ -463,18 +456,8 @@ td {
   margin-bottom: 3rem;
 }
 
-.timeline-item {
-  display: flex;
-}
-
-.timeline-icon {
-  font-size: 1.75rem;
-  padding: 1rem;
-  background-color: #9e88ff;
-  border: #000 1px solid;
-  border-radius: 50%;
-  line-height: 1.2;
-  color: #fff;
+.activity-description p {
+  margin: 0;
 }
 
 .activity-item {
@@ -486,33 +469,57 @@ td {
   font-size: 1.5rem;
 }
 
-.activity-item h1 {
+.activity-item h3 {
   margin-top: 1rem;
   margin-left: 2rem;
   color: blue;
 }
 
-.activity-scope .activity-content {
+.scope .activity-content {
   display: flex;
   margin: 0 2rem;
   align-items: flex-start;
   gap: 4rem;
 }
 
-.activity-scope h3 {
+.scope h5 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
-
-.activity-timeline h3 {
-  margin: 0 1.5rem;
-}
-
-.activity-timeline .activity-content {
+/* Styling timeline part */
+.timeline .activity-content {
+  display: flex;
+  gap: 1rem;
   border: none;
-  margin: 1.5rem auto;
+  padding-top: 1rem;
 }
-.activity-timeline .activity-description {
+/* Add border top for first timeline item */
+.timeline .activity-content:nth-of-type(1) {
+  border-top: #dee2e6 1px solid;
+}
+/* Styling timeline item description */
+.timeline .activity-description {
   width: 100%;
-  border-bottom: 1px #dee2e6 dashed;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px #1c7ed6 dashed;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.timeline-index {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: #9e88ff;
+  border: #495057 2px solid;
+  border-radius: 50%;
+  color: #fff;
 }

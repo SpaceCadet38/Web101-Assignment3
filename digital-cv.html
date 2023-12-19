@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="css/mobile.css" />
     <link rel="stylesheet" href="css/tablet.css" />
     <link rel="stylesheet" href="css/font.css" />
-    <!-- Google Font Open Sans -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap"
-      rel="stylesheet"
-    />
     <!-- Font Awesome icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
+    <!-- Including Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
     <title>Digital CV</title>
   </head>
   <body>
@@ -32,14 +37,13 @@
       <div class="activity-grid">
         <!-- Goals -->
         <div class="activity-item">
-          <h1>Goals</h1>
-
+          <h3>Goals</h3>
           <div class="activity-content">
             <div class="activity-icon">
               <i class="fa-solid fa-flag-checkered"></i>
             </div>
             <div class="activity-description">
-              <h3>Goal 1</h3>
+              <h5>Goal 1</h5>
               <p>Nắm vững những kiến thức căn bản về HTML, CSS.</p>
             </div>
           </div>
@@ -49,7 +53,7 @@
               <i class="fa-solid fa-flag-checkered"> </i>
             </div>
             <div class="activity-description">
-              <h3>Goal 2</h3>
+              <h5>Goal 2</h5>
               <p>Thiết kế Responsive Webpage cho nhiều kích thước màn hình.</p>
             </div>
           </div>
@@ -59,77 +63,77 @@
               <i class="fa-solid fa-flag-checkered"></i>
             </div>
             <div class="activity-description">
-              <h3>Goal 3</h3>
+              <h5>Goal 3</h5>
               <p>Đưa trang web lên mạng.</p>
             </div>
           </div>
         </div>
         <!-- Member participate in activity -->
         <div class="activity-item">
-          <h1>Team</h1>
+          <h3>Team</h3>
 
           <div class="activity-content">
             <div class="activity-icon">
               <i class="fa-solid fa-user"></i>
             </div>
             <div class="activity-description">
-              <h3>Thành viên 01</h3>
+              <h5>Member 01</h5>
               <p>Lê Quang Tiến</p>
             </div>
           </div>
         </div>
         <!-- Timeline  -->
-        <div class="activity-item activity-timeline">
-          <h1>Timeline</h1>
+        <div class="activity-item timeline">
+          <h3>Timeline</h3>
           <div class="activity-content">
-            <h3 class="timeline-icon">01</h3>
+            <h5 class="timeline-index">01</h5>
             <div class="activity-description">
-              <h4>Project Start</h4>
+              <h5>Project Start</h5>
               <p>Tạo trang mô tả dự án digital CV</p>
             </div>
           </div>
           <div class="activity-content">
-            <h3 class="timeline-icon">02</h3>
+            <h5 class="timeline-index">02</h5>
             <div class="activity-description">
-              <h4>Styling</h4>
+              <h5>Styling</h5>
               <p>Tạo stylesheets cho tablet và mobile</p>
             </div>
           </div>
           <div class="activity-content">
-            <h3 class="timeline-icon">03</h3>
+            <h5 class="timeline-index">03</h5>
             <div class="activity-description">
-              <h4>Add comment</h4>
+              <h5>Add comment</h5>
               <p>Thêm comment</p>
             </div>
           </div>
           <div class="activity-content">
-            <h3 class="timeline-icon">04</h3>
+            <h5 class="timeline-index">04</h5>
             <div class="activity-description">
-              <h4>Add to version control</h4>
+              <h5>Add to version control</h5>
               <p>Commit vào Git</p>
             </div>
           </div>
           <div class="activity-content">
-            <h3 class="timeline-icon">05</h3>
+            <h5 class="timeline-index">05</h5>
             <div class="activity-description">
-              <h4>Hosting</h4>
+              <h5>Hosting</h5>
               <p>Push lên GitHub</p>
             </div>
           </div>
           <div class="activity-content">
-            <h3 class="timeline-icon">06</h3>
+            <h5 class="timeline-index">06</h5>
             <div class="activity-description">
-              <h4>Public</h4>
+              <h5>Public</h5>
               <p>Sử dụng GitHub Page để triển khai trang web</p>
             </div>
           </div>
         </div>
         <!-- activity Scope -->
-        <div class="activity-item activity-scope">
-          <h1>Scopes</h1>
+        <div class="activity-item scope">
+          <h3>Scopes</h3>
           <div class="activity-content">
             <div>
-              <h3>IN</h3>
+              <h5>IN</h5>
               <p>
                 Bài Assignment 3 FUNiX, file starter từ Assignment 2. Cung cấp
                 yêu cầu (requirement), tài nguyên có sẵn như ảnh, hướng dẫn hoàn
@@ -137,10 +141,10 @@
               </p>
             </div>
             <div>
-              <h3>OUT</h3>
+              <h5>OUT</h5>
               <p>
                 Trang Web Digital CV với đầy đủ thông tin cá nhân, và bổ sung
-                thêm thiết kế chó kích cỡ màn hình table và mobile. Ngoài ra còn
+                thêm thiết kế cho kích cỡ màn hình table và mobile. Ngoài ra còn
                 có thêm trang thông tin chi tiết về dự án đã thực hiện
               </p>
             </div>
@@ -148,16 +152,16 @@
         </div>
         <!-- activity primary -->
         <div class="activity-item">
-          <h1>Primary</h1>
+          <h3>Primary</h3>
 
           <div class="activity-content">
             <div class="activity-icon">
               <i class="fa-solid fa-circle-question"></i>
             </div>
             <div class="activity-description">
-              <h3>Digital CV</h3>
               <p>
-                Mục tiêu: hiển thị tốt trên 3 kích thước Laptop, Table, Mobile.
+                Mục tiêu: Thiết kế đúng giao diện, đầy đủ các chức năng trang
+                web.
               </p>
             </div>
           </div>
@@ -167,7 +171,6 @@
               <i class="fa-solid fa-circle-question"></i>
             </div>
             <div class="activity-description">
-              <h3>Mô tả activity</h3>
               <p>
                 Mục tiêu: hiển thị tốt trên 3 kích thước Laptop, Table, Mobile.
               </p>

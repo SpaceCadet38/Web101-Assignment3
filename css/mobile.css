@@ -3,7 +3,7 @@
     font-size: 90%;
   }
 
-  .center {
+  .avatar {
     display: none;
   }
 
@@ -55,7 +55,7 @@
     margin: 0 0.5rem;
   }
 
-  /* Styling outer orf */
+  /* Styling outer page */
   .activity-grid {
     grid-template-columns: auto;
   }
